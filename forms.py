@@ -62,4 +62,4 @@ class TaskForm(Form):
 	title = StringField('title', validators=[DataRequired()])
 	content = TextAreaField('content')
 	priority = SelectField('priority', choices=[('', 'Priority'), ('low','low'), ('medium', 'medium'), ('high','high')], default='Priority')
-	date = DateField('Pick a Date')
+	date = DateField('Pick a Date', default=date.today())
